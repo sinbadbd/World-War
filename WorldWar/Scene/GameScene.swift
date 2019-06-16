@@ -58,6 +58,8 @@ class GameScene : SKScene {
         
         addPlane()
         addSmallBall()
+        
+        startNewLevel()
     }
     
     func addPlane(){
@@ -99,6 +101,16 @@ class GameScene : SKScene {
     }
     
     
+    func startNewLevel(){
+        let spawn = SKAction.run(spawnEnemy)
+        let waitToSpawn = SKAction.wait(forDuration: 5)
+        let spawnSequence = SKAction.sequence([spawn, waitToSpawn])
+        let spawnForever = SKAction.repeatForever(spawnSequence)
+        self.run(spawnForever)
+        
+    }
+    
+    
     
     @objc func addSmallBall(){
         
@@ -116,7 +128,7 @@ class GameScene : SKScene {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         fireBullet()
-        spawnEnemy()
+     //   spawnEnemy()
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
