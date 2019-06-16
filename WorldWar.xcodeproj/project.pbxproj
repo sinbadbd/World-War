@@ -13,6 +13,8 @@
 		A1EC542522B40482009A480B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1EC542422B40482009A480B /* Assets.xcassets */; };
 		A1EC542822B40482009A480B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1EC542622B40482009A480B /* LaunchScreen.storyboard */; };
 		A1EC543022B41802009A480B /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EC542F22B41802009A480B /* GameScene.swift */; };
+		A1EC543422B433DB009A480B /* StartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EC543322B433DB009A480B /* StartScene.swift */; };
+		A1EC543622B53D18009A480B /* bullet.aiff in Resources */ = {isa = PBXBuildFile; fileRef = A1EC543522B53D17009A480B /* bullet.aiff */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		A1EC542722B40482009A480B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1EC542922B40482009A480B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1EC542F22B41802009A480B /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		A1EC543322B433DB009A480B /* StartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScene.swift; sourceTree = "<group>"; };
+		A1EC543522B53D17009A480B /* bullet.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = bullet.aiff; path = ../../../../Downloads/bullet.aiff; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +60,10 @@
 		A1EC541C22B4045F009A480B /* WorldWar */ = {
 			isa = PBXGroup;
 			children = (
+				A1EC543522B53D17009A480B /* bullet.aiff */,
+				A1EC543222B43030009A480B /* Scene */,
 				A1EC541D22B4045F009A480B /* AppDelegate.swift */,
 				A1EC541F22B4045F009A480B /* ViewController.swift */,
-				A1EC542F22B41802009A480B /* GameScene.swift */,
 				A1EC542422B40482009A480B /* Assets.xcassets */,
 				A1EC542922B40482009A480B /* Info.plist */,
 				A1EC543122B42167009A480B /* View */,
@@ -73,6 +78,15 @@
 				A1EC542122B4045F009A480B /* Main.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A1EC543222B43030009A480B /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				A1EC542F22B41802009A480B /* GameScene.swift */,
+				A1EC543322B433DB009A480B /* StartScene.swift */,
+			);
+			path = Scene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +150,7 @@
 				A1EC542822B40482009A480B /* LaunchScreen.storyboard in Resources */,
 				A1EC542522B40482009A480B /* Assets.xcassets in Resources */,
 				A1EC542322B4045F009A480B /* Main.storyboard in Resources */,
+				A1EC543622B53D18009A480B /* bullet.aiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +164,7 @@
 				A1EC543022B41802009A480B /* GameScene.swift in Sources */,
 				A1EC542022B4045F009A480B /* ViewController.swift in Sources */,
 				A1EC541E22B4045F009A480B /* AppDelegate.swift in Sources */,
+				A1EC543422B433DB009A480B /* StartScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
