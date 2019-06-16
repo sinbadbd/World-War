@@ -15,6 +15,7 @@
 		A1EC543022B41802009A480B /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EC542F22B41802009A480B /* GameScene.swift */; };
 		A1EC543422B433DB009A480B /* StartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EC543322B433DB009A480B /* StartScene.swift */; };
 		A1EC543622B53D18009A480B /* bullet.aiff in Resources */ = {isa = PBXBuildFile; fileRef = A1EC543522B53D17009A480B /* bullet.aiff */; };
+		A1FA8F4922B6CD3900CA5AA6 /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1FA8F4822B6CD3900CA5AA6 /* explosion.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		A1EC542F22B41802009A480B /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		A1EC543322B433DB009A480B /* StartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScene.swift; sourceTree = "<group>"; };
 		A1EC543522B53D17009A480B /* bullet.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = bullet.aiff; path = ../../../../Downloads/bullet.aiff; sourceTree = "<group>"; };
+		A1FA8F4822B6CD3900CA5AA6 /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = explosion.mp3; path = ../../../../Downloads/explosion.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				A1EC543522B53D17009A480B /* bullet.aiff */,
+				A1FA8F4822B6CD3900CA5AA6 /* explosion.mp3 */,
 				A1EC543222B43030009A480B /* Scene */,
 				A1EC541D22B4045F009A480B /* AppDelegate.swift */,
 				A1EC541F22B4045F009A480B /* ViewController.swift */,
@@ -151,6 +154,7 @@
 				A1EC542522B40482009A480B /* Assets.xcassets in Resources */,
 				A1EC542322B4045F009A480B /* Main.storyboard in Resources */,
 				A1EC543622B53D18009A480B /* bullet.aiff in Resources */,
+				A1FA8F4922B6CD3900CA5AA6 /* explosion.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

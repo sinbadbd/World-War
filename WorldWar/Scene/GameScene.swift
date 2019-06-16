@@ -16,7 +16,7 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
     var timer = Timer()
     
     let bulletSound = SKAction.playSoundFileNamed("bullet.aiff", waitForCompletion: false)
-    
+    let explosionSound = SKAction.playSoundFileNamed("explosion.mp3", waitForCompletion: false)
     
     func random() -> CGFloat {
         return CGFloat(Float(arc4random()) / 0xFFFFFFFF)
@@ -73,7 +73,7 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
     
     func addPlane(){
         planeNode.position = CGPoint(x: frame.midX, y: frame.minY + planeNode.size.height + 10)
-        planeNode.zPosition = 1
+        planeNode.zPosition = 2
         planeNode.physicsBody = SKPhysicsBody(rectangleOf: planeNode.size)
         planeNode.physicsBody!.affectedByGravity = false
         planeNode.physicsBody?.categoryBitMask = PhsicsCategories.Player
@@ -90,7 +90,7 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
         bullet.physicsBody?.categoryBitMask = PhsicsCategories.Bullet
         bullet.physicsBody?.collisionBitMask = PhsicsCategories.None
         bullet.physicsBody?.contactTestBitMask = PhsicsCategories.Enemy
-        //  bullet.zPosition = -1
+        bullet.zPosition = 1
         addChild(bullet)
         
         let moveBullet = SKAction.moveTo(y: self.size.height + bullet.size.height, duration: 1)
@@ -143,7 +143,7 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
         let scaleIn = SKAction.scale(to: 1, duration: 0.1)
         let fadeOut = SKAction.fadeOut(withDuration: 0.1)
         let delete = SKAction.removeFromParent()
-        let seq = SKAction.sequence([scaleIn, fadeOut, delete])
+        let seq = SKAction.sequence([explosionSound,scaleIn, fadeOut, delete])
         explosion.run(seq)
     }
     
@@ -185,7 +185,7 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
         var body1 = SKPhysicsBody()
         var body2 = SKPhysicsBody()
         
-        if contact.bodyA.categoryBitMask < contact.bodyB.collisionBitMask {
+        if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
             body1 = contact.bodyA
             body2 = contact.bodyB
         } else {
