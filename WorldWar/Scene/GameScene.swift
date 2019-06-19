@@ -8,6 +8,8 @@
 
 import SpriteKit
 
+var gameScore = 0
+
 class GameScene : SKScene, SKPhysicsContactDelegate {
     
     let gameBg = SKSpriteNode(imageNamed: "backgroundColor")
@@ -19,11 +21,11 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
     let bulletSound = SKAction.playSoundFileNamed("bullet.aiff", waitForCompletion: false)
     let explosionSound = SKAction.playSoundFileNamed("explosion.mp3", waitForCompletion: false)
     
-    var gameScore = 0
+   
     let scoreLabel = SKLabelNode(fontNamed: "LuckiestGuy-Regular")
     var levelnumber = 0
     
-    var livesNumber = 0
+    var livesNumber = 5
     var livesLevel = SKLabelNode(fontNamed: "LuckiestGuy-Regular")
     
     enum GameState {
@@ -71,6 +73,8 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
     
     
     override func didMove(to view: SKView) {
+        
+        gameScore = 0
         
         self.physicsWorld.contactDelegate = self
         
@@ -265,7 +269,21 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
         self.enumerateChildNodes(withName: "Enemy") { (enemy, stop) in
             enemy.removeAllActions()
         }
+        
+        let changeSceneAction = SKAction.run(changeScene)
+        let waitToChangeScene = SKAction.wait(forDuration: 1)
+        let changeSceneSequence = SKAction.sequence([waitToChangeScene,changeSceneAction])
+        self.run(changeSceneSequence)
     }
+    
+    func changeScene(){
+        let sceneToMoveTo = GameOverScene(size: self.size)
+        sceneToMoveTo.scaleMode = self.scaleMode
+        let transition = SKTransition.fade(withDuration: 05)
+        self.view?.presentScene(sceneToMoveTo, transition: transition )
+        
+    }
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if currentGameState == GameState.InGame {

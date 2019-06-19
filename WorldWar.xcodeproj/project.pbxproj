@@ -16,6 +16,7 @@
 		A1EC543422B433DB009A480B /* StartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EC543322B433DB009A480B /* StartScene.swift */; };
 		A1EC543622B53D18009A480B /* bullet.aiff in Resources */ = {isa = PBXBuildFile; fileRef = A1EC543522B53D17009A480B /* bullet.aiff */; };
 		A1F28FBC22B92F88000D9C1B /* LuckiestGuy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1F28FBB22B92F88000D9C1B /* LuckiestGuy-Regular.ttf */; };
+		A1F28FBE22B9841B000D9C1B /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F28FBD22B9841B000D9C1B /* GameOverScene.swift */; };
 		A1FA8F4922B6CD3900CA5AA6 /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1FA8F4822B6CD3900CA5AA6 /* explosion.mp3 */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		A1EC543322B433DB009A480B /* StartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScene.swift; sourceTree = "<group>"; };
 		A1EC543522B53D17009A480B /* bullet.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = bullet.aiff; path = ../../../../Downloads/bullet.aiff; sourceTree = "<group>"; };
 		A1F28FBB22B92F88000D9C1B /* LuckiestGuy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LuckiestGuy-Regular.ttf"; path = "../../../../../Downloads/Luckiest_Guy/LuckiestGuy-Regular.ttf"; sourceTree = "<group>"; };
+		A1F28FBD22B9841B000D9C1B /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		A1FA8F4822B6CD3900CA5AA6 /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = explosion.mp3; path = ../../../../Downloads/explosion.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +93,7 @@
 			children = (
 				A1EC542F22B41802009A480B /* GameScene.swift */,
 				A1EC543322B433DB009A480B /* StartScene.swift */,
+				A1F28FBD22B9841B000D9C1B /* GameOverScene.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1F28FBE22B9841B000D9C1B /* GameOverScene.swift in Sources */,
 				A1EC543022B41802009A480B /* GameScene.swift in Sources */,
 				A1EC542022B4045F009A480B /* ViewController.swift in Sources */,
 				A1EC541E22B4045F009A480B /* AppDelegate.swift in Sources */,
